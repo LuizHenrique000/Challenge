@@ -1,0 +1,27 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+.header {
+  background-color: #ffe7d1;
+  height: 50px;
+  border: transparent;
+  box-shadow: 1px 1px 1px black;
+}
+
+.navbar {
+  box-shadow: 0px 0px 1px black;
+  background-color: white;
+  height: 50px;
+}
+
+.favoritos {
+  position: relative;
+}
+
+.favoritos,
+.livros {
+  text-decoration: none;
+  color: black;
+}
