@@ -70,3 +70,7 @@ body {
   left: 45px;
   bottom: 3px;
 }
+
+li {
+  list-style-type: none;
+}
