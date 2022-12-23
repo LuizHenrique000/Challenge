@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Livros from "./pages/Livros";
-import Favoritos from "./pages/Favoritos";
+import Home from "./pages/home/home";
+import Favoritos from "./pages/favoritos/favoritos";
 
 export function AppRoutes() {
   return (
     <Router>
       <Routes>
-        <Route path="" element={<Livros />} />
+        <Route path="" element={<Home />} />
         <Route path="/favoritos" element={<Favoritos />} />
       </Routes>
     </Router>

@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import "../pages/style.css";
+import "../home/home.css";
+import Header from "../../components/header/header";
 
-export default function Livros() {
+export default function Home() {
   const [livros, setLivros] = useState([]);
+  const [favoritos, setFavoritos] = useState([]);
 
   const buscarLivros = async () => {
     const resultado = await axios.get(
@@ -16,8 +18,18 @@ export default function Livros() {
     buscarLivros();
   }, []);
 
+  const favoritarLivro = (id) => {
+    livros.map((livro) => {
+      if (livro.id == id) {
+        setFavoritos((livrosAnteriores) => [...livrosAnteriores, livro]);
+        window.alert("Livro Favoritado Com Sucesso!");
+      }
+    });
+  };
+
   return (
     <div>
+      <Header />
       <div className="book-container">
         {livros.map((livro, index) => (
           <li key={livro.id}>
@@ -35,10 +47,18 @@ export default function Livros() {
               <p className="autor">{livro.author}</p>
               <p className="genero">{livro.genre}</p>
               <p className="descricao">{livro.description}</p>
-              <button className="favorito">Favoritar</button>
+              <button
+                className="favorito"
+                onClick={() => {
+                  favoritarLivro(livro.id);
+                }}
+              >
+                Favoritar
+              </button>
             </div>
           </li>
         ))}
+        {console.log(favoritos)}
       </div>
     </div>
   );

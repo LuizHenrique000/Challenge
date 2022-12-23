@@ -13,11 +13,11 @@ body {
 }
 
 .image {
-  border-radius: 2px;
+  border-radius: 10px;
 }
 
 .book {
-  border-radius: 3px;
+  border-radius: 10px;
   width: 170px;
   box-shadow: 0px 0px 10px gray;
   margin-left: 10px;
