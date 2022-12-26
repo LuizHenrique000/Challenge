@@ -2,10 +2,11 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "../home/home.css";
 import Header from "../../components/header/header";
+import { useFavoritosContext } from "../../contexts/FavoritosContext";
 
 export default function Home() {
   const [livros, setLivros] = useState([]);
-  const [favoritos, setFavoritos] = useState([]);
+  const { setFavoritos } = useFavoritosContext();
 
   const buscarLivros = async () => {
     const resultado = await axios.get(
@@ -22,7 +23,7 @@ export default function Home() {
     livros.map((livro) => {
       if (livro.id == id) {
         setFavoritos((livrosAnteriores) => [...livrosAnteriores, livro]);
-        window.alert("Livro Favoritado Com Sucesso!");
+        alert("Livro Favoritado Com Sucesso!");
       }
     });
   };
@@ -58,7 +59,6 @@ export default function Home() {
             </div>
           </li>
         ))}
-        {console.log(favoritos)}
       </div>
     </div>
   );

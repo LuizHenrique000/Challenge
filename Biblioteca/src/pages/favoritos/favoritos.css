@@ -1,0 +1,76 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background-color: darkgray;
+}
+
+.book-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image {
+  border-radius: 10px;
+}
+
+.book {
+  border-radius: 10px;
+  width: 170px;
+  box-shadow: 0px 0px 10px gray;
+  margin-left: 10px;
+  margin-top: 10px;
+  background-color: white;
+}
+
+.titulo,
+.autor,
+.genero,
+.descricao {
+  font-family: Arial, sans-serif;
+  padding-bottom: 6px;
+}
+
+.titulo {
+  color: #717171;
+}
+
+.descricao {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  direction: ltr;
+}
+
+.favorito {
+  background-color: #d3d3d3;
+  border-radius: 8px;
+  height: 30px;
+  width: 70px;
+  border: transparent;
+  position: relative;
+  left: 45px;
+  bottom: 3px;
+}
+
+.favorito:hover {
+  transition: 0.7s;
+  background-color: #717171;
+}
+
+.favorito:focus {
+  background-color: greenyellow;
+  border-radius: 8px;
+  height: 30px;
+  width: 70px;
+  border: transparent;
+  position: relative;
+  left: 45px;
+  bottom: 3px;
+}
+
+li {
+  list-style-type: none;
+}
