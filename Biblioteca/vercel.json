@@ -1,8 +1,6 @@
 {
-  "rewrites": [
-    {
-      "source": "/((?!api/.*).*)",
-      "destination": "/index.html"
-    }
+  "routes": [
+    { "src": "/", "dest": "" },
+    { "src": "/favoritos", "dest": "/favoritos" }
   ]
 }
