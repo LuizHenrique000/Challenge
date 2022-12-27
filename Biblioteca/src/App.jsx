@@ -1,4 +1,4 @@
-import { AppRoutes } from "./Routes";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/home-page/home";
 import Favoritos from "./pages/favoritos-page/Favoritos";
 import { FavoritosStorage } from "./contexts/FavoritosContext";
@@ -9,10 +9,12 @@ function App() {
     <div>
       <LivrosStorage>
         <FavoritosStorage>
-          <AppRoutes>
-            <Home />
-            <Favoritos />
-          </AppRoutes>
+          <Router>
+            <Routes>
+              <Route path="" element={<Home />} />
+              <Route path="/favoritos" element={<Favoritos />} />
+            </Routes>
+          </Router>
         </FavoritosStorage>
       </LivrosStorage>
     </div>
