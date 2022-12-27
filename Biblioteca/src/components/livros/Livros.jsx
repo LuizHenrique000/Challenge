@@ -41,6 +41,7 @@ export default function Livro() {
             </p>
             <p className="autor">{livro.author}</p>
             <p className="genero">{livro.genre}</p>
+            <p className="data">{livro.published}</p>
             <p className="descricao">{livro.description}</p>
             <button
               className="favorito"

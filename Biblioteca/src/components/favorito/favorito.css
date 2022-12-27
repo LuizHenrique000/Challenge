@@ -28,6 +28,7 @@ body {
 .titulo,
 .autor,
 .genero,
+.data,
 .descricao {
   font-family: Arial, sans-serif;
   padding-bottom: 6px;
@@ -44,6 +45,39 @@ body {
   direction: ltr;
 }
 
+.desfavoritar {
+  background-color: #d3d3d3;
+  border-radius: 100%;
+  height: 30px;
+  width: 30px;
+  border: transparent;
+  position: relative;
+  left: 130px;
+  bottom: 3px;
+}
+
+.desfavoritar:hover {
+  transition: 0.7s;
+  background-color: #717171;
+}
+
+.desfavoritar:focus {
+  background-color: #ff6961;
+  border-radius: 100%;
+  height: 30px;
+  width: 30px;
+  border: transparent;
+  position: relative;
+  position: relative;
+  left: 130px;
+  bottom: 3px;
+}
+
 li {
   list-style-type: none;
+}
+
+.icon {
+  position: relative;
+  top: 2px;
 }

@@ -1,7 +1,17 @@
 import { useFavoritosContext } from "../../contexts/FavoritosContext";
+import { VscChromeClose } from "react-icons/vsc";
+import "../favorito/favorito.css";
 
 export default function favorito() {
-  const { favoritos } = useFavoritosContext();
+  const { favoritos, setFavoritos } = useFavoritosContext();
+
+  const removerFavorito = (id) => {
+    const favoritosAtualizados = favoritos.filter(
+      (favorito) => favorito.id !== id
+    );
+    setFavoritos(favoritosAtualizados);
+    alert("Livro Desfavoritado Com Sucesso!");
+  };
 
   return (
     <div>
@@ -21,7 +31,16 @@ export default function favorito() {
               </p>
               <p className="autor">{livro.author}</p>
               <p className="genero">{livro.genre}</p>
+              <p className="data">{livro.published}</p>
               <p className="descricao">{livro.description}</p>
+              <button
+                className="desfavoritar"
+                onClick={() => {
+                  removerFavorito(livro.id);
+                }}
+              >
+                <VscChromeClose className="icon" />
+              </button>
             </div>
           </li>
         ))}

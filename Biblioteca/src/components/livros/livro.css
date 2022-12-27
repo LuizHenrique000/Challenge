@@ -28,6 +28,7 @@ body {
 .titulo,
 .autor,
 .genero,
+.data,
 .descricao {
   font-family: Arial, sans-serif;
   padding-bottom: 6px;
@@ -60,7 +61,7 @@ body {
   background-color: #717171;
 }
 
-.favorito:focus {
+.favorito:hover {
   background-color: greenyellow;
   border-radius: 100%;
   height: 30px;
