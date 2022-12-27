@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/homePage/home";
-import Favoritos from "./pages/favoritosPage/Favoritos";
-import { FavoritosStorage } from "./contexts/FavoritosContext";
-import { LivrosStorage } from "./contexts/LivrosContext";
+import Home from "./pages/homepage/home";
+import Favoritos from "./pages/favoritospage/favoritos";
+import { FavoritosStorage } from "./contexts/favoritoscontext";
+import { LivrosStorage } from "./contexts/livroscontext";
 
 function App() {
   return (
