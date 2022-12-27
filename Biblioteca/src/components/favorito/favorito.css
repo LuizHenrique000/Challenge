@@ -44,33 +44,6 @@ body {
   direction: ltr;
 }
 
-.favorito {
-  background-color: #d3d3d3;
-  border-radius: 8px;
-  height: 30px;
-  width: 70px;
-  border: transparent;
-  position: relative;
-  left: 45px;
-  bottom: 3px;
-}
-
-.favorito:hover {
-  transition: 0.7s;
-  background-color: #717171;
-}
-
-.favorito:focus {
-  background-color: greenyellow;
-  border-radius: 8px;
-  height: 30px;
-  width: 70px;
-  border: transparent;
-  position: relative;
-  left: 45px;
-  bottom: 3px;
-}
-
 li {
   list-style-type: none;
 }
