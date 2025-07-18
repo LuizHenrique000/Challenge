@@ -32,13 +32,11 @@ export default function Livro() {
             <img
               className="image"
               await="true"
-              src={`${livro.image}/${index}`}
+              src="https://img.icons8.com/ios/452/book.png"
               height="200px"
               width="170px"
             />
-            <p className="titulo">
-              <strong>{livro.title}</strong>
-            </p>
+            <p className="titulo">{livro.title}</p>
             <p className="autor">{livro.author}</p>
             <p className="genero">{livro.genre}</p>
             <p className="data">{livro.published}</p>
